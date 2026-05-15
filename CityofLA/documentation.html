@@ -1,0 +1,168 @@
+<h2 id="city-of-los-angeles-job-bulletins-dataset-documentation">City of
+Los Angeles Job Bulletins — Dataset Documentation</h2>
+<h2 id="dataset-overview">1. Dataset Overview</h2>
+<p>This project works with the <strong>City of Los Angeles Job
+Bulletins</strong> dataset, originally published on Kaggle by the City
+of LA. The dataset consists of 683 plain-text job bulletins published by
+the Los Angeles Personnel Department. Each bulletin describes a single
+job classification, including its duties, minimum qualifications
+(education, experience, required courses, and licenses), salary range,
+and application process.</p>
+<p>The bulletins cover a wide range of public sector roles, from
+administrative clerks and accountants to engineers, police officers, and
+zoo curators, giving a broad cross-section of City of LA employment
+requirements.</p>
+<hr />
+<h2 id="submitted-reference-files">2. Submitted Reference Files</h2>
+<p>Two reference CSV files are included with this submission. These
+files serve as schema and lookup references rather than the primary
+analysis dataset (see Section 3 for where the primary data will come
+from).</p>
+<h3 id="job_titles_clean.csv"><code>job_titles_clean.csv</code></h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rows</td>
+<td>668</td>
+</tr>
+<tr>
+<td>Columns</td>
+<td>1 (<code>JOB_CLASS_TITLE</code>)</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>The official list of recognized City of LA job class titles</td>
+</tr>
+</tbody>
+</table>
+<p>This file is the authoritative list of all job classifications
+covered by the bulletin corpus. It is used to validate job titles
+extracted from bulletins and to confirm complete coverage. Titles are in
+uppercase (e.g., <code>ACCOUNTANT</code>,
+<code>CIVIL ENGINEERING ASSOCIATE</code>). One
+title,<code>311 DIRECTOR</code>, has a numeric prefix reflecting the
+City’s 311 service line. This is kept as-is.</p>
+<p><strong>Cleaning applied:</strong> - Added column header
+<code>JOB_CLASS_TITLE</code> (original file had none) - Stripped
+leading/trailing whitespace from all values - Removed any duplicate
+entries - Renamed from <code>job_titles .csv</code> (trailing space in
+filename) to <code>job_titles_clean.csv</code></p>
+<hr />
+<h3
+id="data_dictionary_clean.csv"><code>data_dictionary_clean.csv</code></h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rows</td>
+<td>21</td>
+</tr>
+<tr>
+<td>Columns</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Schema definition for the structured output to be extracted from job
+bulletins</td>
+</tr>
+</tbody>
+</table>
+<p>This file defines every field that will be populated when parsing the
+job bulletins into structured tabular data. Each row describes one
+output field.</p>
+<p><strong>Columns:</strong></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Field Name</code></td>
+<td>The name of the output field (e.g., <code>JOB_CLASS_TITLE</code>,
+<code>EDUCATION_YEARS</code>)</td>
+</tr>
+<tr>
+<td><code>Annotation Letter</code></td>
+<td>The letter used to annotate this element in the bulletin annotation
+guide</td>
+</tr>
+<tr>
+<td><code>Description</code></td>
+<td>Plain-English description of what the field captures</td>
+</tr>
+<tr>
+<td><code>Data Type</code></td>
+<td><code>String</code>, <code>Integer</code>, or
+<code>Float</code></td>
+</tr>
+<tr>
+<td><code>Allowable Values</code></td>
+<td>Enumerated valid values where applicable</td>
+</tr>
+<tr>
+<td><code>Accepts Null Values?</code></td>
+<td><code>yes</code> or <code>no</code>, whether the field is required
+for every row</td>
+</tr>
+<tr>
+<td><code>Additional Notes</code></td>
+<td>Extra parsing and formatting guidance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cleaning applied:</strong> - Collapsed embedded newlines
+inside <code>Description</code>, <code>Allowable Values</code>, and
+<code>Additional Notes</code> cells to single spaces (the original CSV
+used RFC-compliant quoted multiline cells which can confuse some tools)
+- Fixed typo in <code>JOB_CLASS_TITLE</code> description: “matching
+<strong>in in</strong> supplied” -&gt; “matching in supplied” - Stripped
+leading/trailing whitespace from all cells - Normalized
+<code>Accepts Null Values?</code> to lowercase
+<code>yes</code>/<code>no</code></p>
+<hr />
+<h2 id="primary-data-how-it-will-be-collected">3. Primary Data: How It
+Will Be Collected</h2>
+<p>The actual analysis dataset does not yet exist as a spreadsheet. It
+will be constructed by <strong>programmatically parsing the 683 job
+bulletin <code>.txt</code> files</strong> included in the dataset.</p>
+<h3 id="approach">Approach</h3>
+<p>Each bulletin is a plain-text file structured around consistent
+section headings:</p>
+<pre><code>DUTIES
+REQUIREMENTS/MINIMUM QUALIFICATIONS
+PROCESS NOTES
+WHERE TO APPLY
+APPLICATION DEADLINE
+SELECTION PROCESS</code></pre>
+<p>We will use <strong>Python with regex-based text extraction</strong>
+to parse each file and populate the 21 fields defined in
+<code>data_dictionary_clean.csv</code>. This is conceptually equivalent
+to web scraping. The difference is that the “pages” are local text files
+rather than live URLs.</p>

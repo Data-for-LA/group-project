@@ -1,0 +1,59 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Lovable / Node (if exported back into the repo)
+LA Civil Service Barriers/
+node_modules/
+bun.lock
+bun.lockb
+.lovable/
+dist/
+build/
+.vite/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Claude / agent state
+.claude/
+
+# Local secrets
+.env
+.env.local
+*.local
+
+# OS / scratch
+*.log
+*.tmp

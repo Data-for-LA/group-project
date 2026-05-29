@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Data — Who Gets In?</title>
+  <meta name="description" content="Source, scope, limitations, and cleaning pipeline for the City of Los Angeles civil service job bulletins and applicant composition datasets." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container-prose site-header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-name">Who Gets In?</span>
+      <span class="brand-sub">DH 101 · UCLA</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="data.html" class="active">Data</a>
+      <a href="narrative.html">Narrative</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-dots" aria-hidden="true"></div>
+  <div class="container-prose page-hero-inner">
+    <p class="eyebrow fade-in">Chapter 02</p>
+    <h1 class="fade-in-d1">The Data</h1>
+    <p class="page-hero-sub fade-in-d2">
+      What 683 City of Los Angeles civil service job bulletins — and their companion applicant
+      composition dataset — can, and cannot, tell us about who gets in.
+    </p>
+    <div class="page-hero-rule"></div>
+  </div>
+</section>
+
+<!-- ABOUT THE SOURCE -->
+<section class="split-section">
+  <div class="container-prose split-grid">
+    <div class="reveal">
+      <p class="eyebrow" style="margin-bottom:0.75rem;">About the source</p>
+      <h2 class="split-h2">An administrative corpus, read as text.</h2>
+    </div>
+    <div class="split-body reveal">
+      <p>
+        Our project works with several hundred civil service job bulletins issued by the
+        <strong>City of Los Angeles Personnel Department</strong>, along with a companion
+        dataset on applicant demographics. Each bulletin is a plain-text document focused on
+        one job classification. It includes the job title, salary range, description of duties,
+        required education or experience, selection process, application procedures, and
+        important deadlines.
+      </p>
+      <p>
+        The companion <strong>Job Applicant Composition</strong> dataset provides aggregated
+        demographic information by job title, including categories such as gender and
+        race/ethnicity. Taken together, these datasets help us study how the City of Los
+        Angeles officially defines public employment and how different groups of applicants
+        are distributed across job categories. They cannot fully reveal the lived experience
+        of work, the internal decision-making of hiring, or the deeper social inequalities
+        that shape who becomes "qualified" in the first place.
+      </p>
+      <p>
+        The data was generated from official job bulletins produced through the City's
+        classification and hiring systems. These bulletins are not neutral descriptions of
+        work. They are administrative and legal documents that define the terms of public
+        examination and determine who is eligible to apply for civil service positions. The
+        dataset was assembled and released in 2019 through a collaboration between the City
+        of Los Angeles and Kaggle as part of the
+        <a href="https://www.kaggle.com/competitions/data-science-for-good-city-of-los-angeles/overview"
+           target="_blank" rel="noreferrer" style="text-decoration:underline; text-decoration-color:var(--gold); text-decoration-thickness:2px; text-underline-offset:4px;">Data
+        Science for Good</a> program.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- IN / OUT -->
+<section class="scope-section">
+  <div class="container-prose">
+    <p class="eyebrow reveal" style="margin-bottom:0.75rem;">Scope</p>
+    <h2 class="split-h2 reveal">What's in, what's out.</h2>
+    <div class="scope-grid">
+      <div class="scope-panel in-corpus reveal">
+        <p class="scope-tag">In the corpus</p>
+        <ul class="scope-list">
+          <li>— Job title and class code</li>
+          <li>— Annual salary range or flat rate</li>
+          <li>— Description of duties</li>
+          <li>— Stated minimum education requirement</li>
+          <li>— Required years of work experience</li>
+          <li>— Required licenses / certifications</li>
+          <li>— Exam type (open-competitive, promotional, or both)</li>
+          <li>— Application procedure and important deadlines</li>
+          <li>— Aggregated applicant gender and race/ethnicity by job title <em>(companion dataset)</em></li>
+        </ul>
+      </div>
+      <div class="scope-panel not-corpus reveal">
+        <p class="scope-tag">Not in the corpus</p>
+        <ul class="scope-list">
+          <li>— Individual applicant records or résumés</li>
+          <li>— Exam scores or interview outcomes</li>
+          <li>— Who was actually hired or retained</li>
+          <li>— Internal promotion histories of named employees</li>
+          <li>— Informal networks and recommendations</li>
+          <li>— Exempt, temporary, or emergency positions</li>
+          <li>— Bulletin revision history over time</li>
+          <li>— Applicant motivations and reasons for rejection</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CRITIQUE -->
+<section class="split-section">
+  <div class="container-prose split-grid">
+    <div class="reveal">
+      <p class="eyebrow" style="margin-bottom:0.75rem;">Critique</p>
+      <h2 class="split-h2">What this corpus can — and cannot — see.</h2>
+    </div>
+    <div class="split-body reveal">
+      <p>
+        The dataset can illuminate several important aspects of public-sector hiring. Because
+        every civil service opening produces a bulletin, it gives a relatively comprehensive
+        view of how the City formally organizes its workforce at a particular moment. It
+        shows how different types of labor are <strong>categorized, named, and valued</strong>
+        through salary ranges, duties, and qualification requirements. It also reveals
+        patterns in the language of government employment — for example, whether job
+        bulletins use technical or accessible language, and whether certain requirements
+        might discourage applicants who do not already understand the civil service system.
+      </p>
+      <p>
+        At the same time, the dataset has major limitations. The bulletins describe
+        <em>job classifications</em> rather than specific positions; a single classification
+        may apply to many roles across different departments. The dataset cannot show what
+        any individual worker actually does, where they work, how much autonomy they have, or
+        what their workplace conditions are like. It also does not include hiring outcomes:
+        the companion dataset shows who applied, but not who passed the exam, who was
+        interviewed, who was hired, or who stayed in the job over time.
+      </p>
+      <p>
+        Many forms of information that would be necessary for a fuller understanding of city
+        employment are absent — interview scores, applicant motivations, reasons for
+        rejection, informal networks, internal recommendations, and the experiences of
+        applicants navigating the hiring process. The dataset also leaves out workers who do
+        not fit the civil service structure: exempt roles (including many senior or political
+        positions) and temporary and emergency positions. As a result, the dataset gives a
+        strong view of formal civil service hiring, but a weaker view of the entire public
+        workforce.
+      </p>
+      <p>
+        The <strong>ontology</strong> of the dataset also has ideological effects. By
+        organizing employment into categories such as job title, duties, salary,
+        qualifications, and deadlines, the dataset presents public employment as orderly,
+        standardized, and merit-based. This reflects the values of the civil service system,
+        but it can also make the hiring process appear more neutral than it is. The dataset
+        does not show how job requirements were created, how salary levels were negotiated,
+        or how definitions of merit may reflect existing inequalities in education,
+        professional experience, licensing, and access to institutional knowledge.
+      </p>
+      <p class="split-quote">
+        We read this dataset as a record of <em>institutional self-description</em> — not
+        a complete picture of public employment itself.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- DROPPED RESEARCH QUESTIONS -->
+<section class="resource-section paper">
+  <div class="container-prose">
+    <p class="eyebrow reveal" style="margin-bottom:0.75rem;">Questions we couldn't answer</p>
+    <h2 class="reveal" style="font-family:var(--font-serif); font-size:1.875rem; font-weight:600;">Five research questions excluded by the data.</h2>
+    <p class="reveal" style="margin-top:0.75rem; max-width:42rem; color:var(--muted);">
+      Several proposed research questions cannot be answered with the available dataset and
+      are explicitly excluded from our analysis. We list them here to make the boundary of
+      what the bulletins can support visible.
+    </p>
+    <ul class="resource-list">
+      <li class="resource-entry reveal">
+        <p class="resource-citation"><strong>Approaching-retirement demographics</strong></p>
+        <p class="resource-note">No age or hire-date data in the bulletins.</p>
+      </li>
+      <li class="resource-entry reveal">
+        <p class="resource-citation"><strong>English-only publishing patterns</strong></p>
+        <p class="resource-note">All bulletins are in English; no contrast group exists to visualize.</p>
+      </li>
+      <li class="resource-entry reveal">
+        <p class="resource-citation"><strong>Demographic makeup of the applicant pool at the individual level</strong></p>
+        <p class="resource-note">No applicant records are included; only aggregated counts by job title.</p>
+      </li>
+      <li class="resource-entry reveal">
+        <p class="resource-citation"><strong>Informal knowledge networks</strong></p>
+        <p class="resource-note">No neighborhood or social-network data.</p>
+      </li>
+      <li class="resource-entry reveal">
+        <p class="resource-citation"><strong>Criminal records and experience gaps</strong></p>
+        <p class="resource-note">No applicant history data.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- PIPELINE -->
+<section class="pipeline-section">
+  <div class="container-prose">
+    <p class="eyebrow reveal" style="margin-bottom:0.75rem;">Pipeline</p>
+    <h2 class="split-h2 reveal">Six steps from raw text to structured table.</h2>
+    <div class="pipeline-grid">
+      <article class="pipeline-card reveal">
+        <p class="pipeline-n">01</p>
+        <h3>Salary extraction via regex</h3>
+        <p>Parsed annual salary ranges from free-text bulletin headers. Handled flat salaries, multiple bands, and missing values. Final salary coverage: 680 of 683 bulletins.</p>
+      </article>
+      <article class="pipeline-card reveal">
+        <p class="pipeline-n">02</p>
+        <h3>Education tier classification</h3>
+        <p>Mapped phrases like "graduation from a recognized college" or "bachelor's degree in engineering" to five ordered tiers: No Formal Requirement → High School → Some College → Bachelor's → Graduate.</p>
+      </article>
+      <article class="pipeline-card reveal">
+        <p class="pipeline-n">03</p>
+        <h3>Experience parsing</h3>
+        <p>Extracted required years of work experience using a layered regex matching constructions like "four years of full-time paid professional experience."</p>
+      </article>
+      <article class="pipeline-card reveal">
+        <p class="pipeline-n">04</p>
+        <h3>Exam access type parsing</h3>
+        <p>Identified whether each bulletin advertised an open-competitive exam (any applicant), a promotional exam (current City employees only), or both.</p>
+      </article>
+      <article class="pipeline-card reveal">
+        <p class="pipeline-n">05</p>
+        <h3>Sector keyword classification</h3>
+        <p>Assigned each title to one of five sectors — Public Safety, Technical/Engineering, Trades/Infrastructure, Administrative, Health/Social Services — using a curated keyword dictionary, hand-checked for ambiguous overlaps.</p>
+      </article>
+      <article class="pipeline-card reveal">
+        <p class="pipeline-n">06</p>
+        <h3>Reference file cleanup</h3>
+        <p>Stripped boilerplate (filing instructions, ADA notices, application links) so downstream analysis runs on substantive bulletin text only.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CORPUS TABLE -->
+<section class="table-section">
+  <div class="container-prose">
+    <p class="eyebrow reveal" style="margin-bottom:0.75rem;">Corpus breakdown</p>
+    <h2 class="reveal">Bulletins by sector.</h2>
+    <p class="lead reveal">
+      The corpus is dominated by administrative roles; the smallest category — Health /
+      Social Services — is small enough that we treat its averages with care throughout the
+      Narrative.
+    </p>
+    <div class="table-wrap reveal">
+      <table class="corpus-table">
+        <thead>
+          <tr>
+            <th>Sector</th>
+            <th class="right">Bulletins</th>
+            <th class="right">Share</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Administrative</td><td class="right">397</td><td class="right muted">58.1%</td></tr>
+          <tr><td>Technical / Engineering</td><td class="right">128</td><td class="right muted">18.7%</td></tr>
+          <tr><td>Trades / Infrastructure</td><td class="right">96</td><td class="right muted">14.1%</td></tr>
+          <tr><td>Public Safety</td><td class="right">50</td><td class="right muted">7.3%</td></tr>
+          <tr><td>Health / Social Services</td><td class="right">9</td><td class="right muted">1.3%</td></tr>
+          <tr><td>Unclassified</td><td class="right">3</td><td class="right muted">0.4%</td></tr>
+          <tr class="total-row"><td>Total</td><td class="right">683</td><td class="right muted">100%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAR -->
+<section class="cta-bar">
+  <div class="container-prose cta-bar-row">
+    <p class="cta-bar-title">Ready to read the findings?</p>
+    <a href="narrative.html" class="btn-solid-navy">Continue to Narrative <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container-prose site-footer-grid">
+    <div>
+      <p class="footer-brand-title">Who Gets In?</p>
+      <p class="footer-brand-desc">Credential Barriers in the City of Los Angeles Civil Service.</p>
+    </div>
+    <div class="footer-section">
+      <p class="eyebrow gold-soft">Project</p>
+      <ul class="footer-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="data.html">Data</a></li>
+        <li><a href="narrative.html">Narrative</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </div>
+    <div class="footer-section footer-course">
+      <p class="eyebrow gold-soft">Course</p>
+      <p class="mt">DH 101 — Introduction to Digital Humanities</p>
+      <p>University of California, Los Angeles</p>
+      <p style="margin-top:0.25rem;">Spring 2026</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container-prose footer-copy">© 2026 Song Chen · Jiayi Su · Linn Khant Thuya · Khant Nyi Hlaing · Katie Lew · Hana Chloe Yoon. Built for educational use.</div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -80px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

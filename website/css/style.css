@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600;700&display=swap");
 
-/* ── Reset ─────────────────────────────────────────────── */
+/*  Reset  */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ── Design tokens (mirror Lovable styles.css) ─────────── */
+/*  Design tokens  */
 :root {
-  /* Brand — warm hazy dusk */
   --navy:        oklch(0.28 0.02 60);
   --navy-deep:   oklch(0.20 0.015 60);
   --gold:        oklch(0.86 0.10 70);
@@ -50,7 +49,7 @@ h1, h2, h3, h4 {
 p { margin: 0; }
 ul { list-style: none; padding: 0; margin: 0; }
 
-/* ── Utility classes ───────────────────────────────────── */
+/*  Utility classes  */
 .font-sans-ui { font-family: var(--font-sans); }
 .font-serif   { font-family: var(--font-serif); }
 .font-body    { font-family: var(--font-body); }
@@ -68,7 +67,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 }
 .eyebrow.gold-soft { color: var(--gold-soft); }
 
-/* ── Animations ────────────────────────────────────────── */
+/*  Animations  */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(6px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -91,11 +90,10 @@ ul { list-style: none; padding: 0; margin: 0; }
 }
 .animate-shimmer { animation: shimmer 3s ease-in-out infinite; }
 
-/* observer-driven reveal */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.is-visible { opacity: 1; transform: none; }
 
-/* ── HEADER ────────────────────────────────────────────── */
+/*  HEADER  */
 .site-header {
   position: sticky; top: 0; z-index: 50;
   background: rgba(255, 255, 255, 0.9);
@@ -140,7 +138,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   height: 3px; background: var(--gold);
 }
 
-/* ── FOOTER ────────────────────────────────────────────── */
+/*  FOOTER  */
 .site-footer {
   margin-top: 5rem;
   border-top: 1px solid var(--rule);
@@ -170,7 +168,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   color: oklch(1 0 0 / 0.5);
 }
 
-/* ── PAGE HERO (inner pages) ───────────────────────────── */
+/*  PAGE HERO (inner pages)  */
 .page-hero {
   position: relative;
   overflow: hidden;
@@ -206,7 +204,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 @media (min-width: 768px) { .page-hero-sub { font-size: 1.25rem; } }
 .page-hero-rule { margin-top: 2rem; height: 1px; width: 6rem; background: var(--gold); }
 
-/* ── HOMEPAGE: CINEMATIC HERO ──────────────────────────── */
+/*  HOMEPAGE: CINEMATIC HERO  */
 .cine-hero {
   position: relative; isolation: isolate;
   min-height: 92vh; overflow: hidden;
@@ -336,7 +334,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 }
 .btn-pill-ghost:hover { background: oklch(1 0 0 / 0.15); }
 
-/* Bottom ticker stats */
+/*  BOTTOM TICKER STATS  */
 .cine-ticker {
   position: absolute; left: 0; right: 0; bottom: 0; z-index: 10;
   border-top: 1px solid oklch(1 0 0 / 0.15);
@@ -354,7 +352,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 .cine-stat-num { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; color: var(--gold); }
 .cine-stat-lbl { text-transform: uppercase; letter-spacing: 0.18em; color: oklch(1 0 0 / 0.7); }
 
-/* ── HOOK / PULL QUOTE ─────────────────────────────────── */
+/*  HOOK QUOTE  */
 .hook-section { position: relative; background: var(--paper); padding: 6rem 0; }
 .hook-pull {
   font-family: var(--font-serif);
@@ -365,7 +363,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 @media (min-width: 768px) { .hook-pull { font-size: 1.85rem; } }
 .hook-pull .accent { color: var(--gold); }
 
-/* ── THESIS SECTION ────────────────────────────────────── */
+/*  THESIS SECTION  */
 .thesis-section {
   position: relative; overflow: hidden;
   background: var(--navy); color: #fff;
@@ -408,7 +406,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   color: oklch(1 0 0 / 0.6);
 }
 
-/* ── RESEARCH QUESTIONS ────────────────────────────────── */
+/*  RESEARCH QUESTIONS  */
 .questions-section { background: var(--background); padding: 6rem 0; }
 .questions-header { max-width: 42rem; margin-bottom: 3.5rem; }
 .questions-header h2 {
@@ -468,7 +466,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   color: var(--muted);
 }
 
-/* ── TEAM ──────────────────────────────────────────────── */
+/*  TEAM  */
 .team-section { background: var(--paper); padding: 6rem 0; }
 .team-section .section-h2 {
   font-family: var(--font-serif);
@@ -510,7 +508,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 .team-bio { margin-top: 0.75rem; font-size: 0.875rem; color: var(--muted); }
 .team-footnote { margin-top: 2.5rem; font-family: var(--font-sans); font-size: 0.875rem; color: var(--muted); }
 
-/* ── CTA CARDS ─────────────────────────────────────────── */
+/*  CTA CARDS  */
 .cta-section { background: var(--background); padding: 5rem 0; }
 .cta-grid {
   display: grid; gap: 1.5rem;
@@ -549,7 +547,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 .cta-card.gradient .cta-card-desc { color: oklch(1 0 0 / 0.8); }
 .cta-card.gradient:hover { box-shadow: 0 25px 50px -12px oklch(0 0 0 / 0.35); border-color: transparent; }
 
-/* ── DATA PAGE — Two-col text block ────────────────────── */
+/*  DATA PAGE  */
 .split-section { background: var(--background); padding: 5rem 0; }
 .split-section.paper { background: var(--paper); }
 .split-grid {
@@ -571,7 +569,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   font-style: italic;
 }
 
-/* ── IN/OUT panels ─────────────────────────────────────── */
+/*  IN/OUT panels  */
 .scope-section { background: var(--paper); padding: 5rem 0; }
 .scope-grid {
   display: grid; gap: 1.5rem; margin-top: 2.5rem;
@@ -593,7 +591,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 .scope-panel.not-corpus .scope-tag { color: var(--navy); }
 .scope-list { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.625rem; color: oklch(0.22 0.015 60 / 0.85); }
 
-/* ── 6-STEP PIPELINE ───────────────────────────────────── */
+/*  PIPELINE  */
 .pipeline-section { background: var(--paper); padding: 5rem 0; }
 .pipeline-grid {
   margin-top: 2.5rem;
@@ -608,7 +606,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 .pipeline-card h3 { margin-top: 0.5rem; font-family: var(--font-serif); font-size: 1.125rem; font-weight: 600; color: var(--navy); }
 .pipeline-card p { margin-top: 0.5rem; font-size: 0.875rem; color: oklch(0.22 0.015 60 / 0.8); }
 
-/* ── DATA TABLE ────────────────────────────────────────── */
+/*  DATA TABLE  */
 .table-section { background: var(--background); padding: 5rem 0; }
 .table-section h2 { font-family: var(--font-serif); font-size: 1.875rem; font-weight: 600; }
 .table-section .lead {
@@ -637,7 +635,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 .corpus-table tr.total-row { background: oklch(0.28 0.02 60 / 0.05); font-weight: 600; }
 .corpus-table tr.total-row td { font-weight: 600; }
 
-/* ── DATA PAGE CTA bar ─────────────────────────────────── */
+/*  DATA PAGE CTA BAR  */
 .cta-bar {
   background: var(--paper);
   padding: 4rem 0;
@@ -661,7 +659,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 }
 .btn-solid-navy:hover { background: var(--navy-deep); }
 
-/* ── NARRATIVE PAGE ────────────────────────────────────── */
+/*  NARRATIVE PAGE  */
 .read-intro-section { background: var(--background); padding: 4rem 0; }
 .read-intro-section p.intro {
   font-family: var(--font-serif);
@@ -733,7 +731,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   color: oklch(0.22 0.015 60 / 0.85);
 }
 
-/* ── CONCLUSION ────────────────────────────────────────── */
+/*  CONCLUSION  */
 .conclusion-section {
   background: var(--navy); color: #fff; padding: 5rem 0;
 }
@@ -775,7 +773,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 }
 .btn-outline-gold:hover { background: var(--gold); color: var(--navy-deep); }
 
-/* ── RESOURCES PAGE ────────────────────────────────────── */
+/*  RESOURCES PAGE  */
 .resource-section { background: var(--background); padding: 4rem 0; }
 .resource-section.paper { background: var(--paper); }
 .resource-section h2 { font-family: var(--font-serif); font-size: 1.875rem; font-weight: 600; }
@@ -820,7 +818,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 .tool-name { font-family: var(--font-serif); font-size: 1.125rem; font-weight: 600; color: var(--navy); }
 .tool-desc { margin-top: 0.25rem; font-size: 0.875rem; color: var(--muted); }
 
-/* ── CITATION SECTION ──────────────────────────────────── */
+/*  CITATION SECTION  */
 .citation-section { background: var(--navy); color: #fff; padding: 4rem 0; }
 .citation-section h2 { font-family: var(--font-serif); font-size: 1.875rem; font-weight: 600; color: #fff; }
 .citation-grid {
@@ -864,7 +862,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   color: oklch(1 0 0 / 0.9);
 }
 
-/* ── Helpers ───────────────────────────────────────────── */
+/*  Helpers  */
 .mt-3 { margin-top: 0.75rem; }
 .mt-5 { margin-top: 1.25rem; }
 .mt-8 { margin-top: 2rem; }

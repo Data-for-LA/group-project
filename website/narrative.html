@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Findings &amp; Narrative — Who Gets In?</title>
-  <meta name="description" content="Project narrative, four visualizations, and analyses of credential barriers, salary, and exam pathways across 683 City of LA civil service job bulletins." />
+  <meta name="description" content="Project narrative, five visualizations, and analyses of credential barriers, salary, and exam pathways across 683 City of LA civil service job bulletins." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -18,6 +18,7 @@
     <nav class="main-nav" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="data.html">Data</a>
+      <a href="timeline.html">Timeline</a>
       <a href="narrative.html" class="active">Narrative</a>
       <a href="resources.html">Resources</a>
     </nav>
@@ -32,93 +33,167 @@
   <div class="container-prose page-hero-inner">
     <p class="eyebrow fade-in">Chapter 03</p>
     <h1 class="fade-in-d1">Findings &amp; Narrative</h1>
-    <p class="page-hero-sub fade-in-d2">A project narrative followed by four visualizations: one argument about who the bulletins let in, told through salary, education, experience, and exam access.</p>
+    <p class="page-hero-sub fade-in-d2">A project narrative followed by five visualizations: one argument about who the bulletins let in, told through salary, education, experience, exam access, and the interaction between them all.</p>
     <div class="page-hero-rule"></div>
   </div>
 </section>
 
-<!-- PROJECT NARRATIVE: 3 PARAGRAPHS -->
+<!-- PROJECT NARRATIVE -->
 <section class="read-intro-section">
   <div class="container-narrow reveal">
     <p class="eyebrow" style="margin-bottom:1rem;">Project narrative</p>
     <h2 style="font-family:var(--font-serif); font-size:2rem; font-weight:600; margin-bottom:1.5rem;">A meritocracy on paper.</h2>
     <p class="intro">
-      The City of Los Angeles civil service system is built around an important idea:
-      public jobs should be available through a fair and organized process. The system
-      uses standardized exams, listed qualifications, and public job bulletins to create
-      a clear path for people who want to work in city government. These rules are
-      designed to make hiring decisions based on skills and qualifications.
-      However, having the same rules for everyone does not always mean that
-      everyone experiences the system in the same way.
+      The City of Los Angeles civil service system is built around a core idea: public jobs should be accessible
+      to the public through a fair, organized, and objective recruitment process. By using standardized
+      examinations, minimum qualifications that are explicitly listed, and job bulletins distributed to the
+      public, the system is designed to create an equitable path for jobseekers looking into city government.
+      These rules are designed to make hiring decisions based strictly on skills, education, and objective
+      qualifications, supposedly stripping away nepotism and subjectivity that can disrupt private-sector
+      hiring. However, standardizing a human resources system does not guarantee that everyone has the
+      same experience with it.
     </p>
     <p class="intro" style="margin-top:1.5rem;">
-      Our project studies how Los Angeles civil service jobs define qualifications and
-      opportunities. We look at how education requirements, work experience, and
-      promotion systems shape who can enter different types of jobs and how much
-      these jobs pay. Education is often seen as an important measure of qualification,
-      but our analysis suggests that higher education requirements do not always
-      match with higher salaries across different job categories. Other factors,
-      including job sectors and access to internal promotion opportunities, may also
-      influence career paths.
+      Our project analyzes approximately 683 official City of Los Angeles civil service job bulletins to explore
+      how required credentials, work experience, and internal promotion systems shape who can enter
+      different types of municipal jobs, and furthermore, how those jobs are compensated. To understand how
+      the civil service system defines qualifications and rewards different types of work, we examine five core
+      questions, each paired with a data visualization in the findings below.
+    </p>
+  </div>
+</section>
+
+<!-- NARRATIVE: MYTH AND REALITY -->
+<section class="read-intro-section" style="padding-top:0;">
+  <div class="container-narrow reveal">
+    <h3 style="font-family:var(--font-serif); font-size:1.35rem; font-weight:600; margin-bottom:1rem;">The myth and reality of merit-based public employment.</h3>
+    <p class="intro">
+      Research demonstrates that merit principles such as open competition, qualification-based hiring, and
+      protection from political influence are essential for maintaining both legitimacy and fairness in public
+      employment (<a href="resources.html">Brewer et al.</a>). When workers see strong adherence to these
+      principles, they report higher job satisfaction and lower turnover intentions, confirming that merit
+      systems remain crucial for workplace quality (<a href="resources.html">Brewer et al.</a>).
     </p>
     <p class="intro" style="margin-top:1.5rem;">
-      To explore this question, we analyze about 683 official City of Los Angeles civil
-      service job bulletins. We collect information about salary ranges, minimum
-      education requirements, required years of experience, and exam types. Some
-      exams are open-competitive, meaning that outside applicants can apply. Other
-      exams are promotional, meaning that they are limited to current City
-      employees. We also organize jobs into different areas, including public safety,
-      administration, technical and engineering work, skilled trades, and
-      health/social services.
+      Government employment also attracts a certain kind of applicant. Individuals motivated by a desire to
+      contribute to society, a psychological concept known as "public service motivation," are far more likely
+      to select public sector jobs over private sector roles, even when accounting for salary and job security
+      (<a href="resources.html">Carpenter et al.</a>). Because applicants may be drawn to civil service for
+      reasons beyond financial gain alone, the language and framing used in recruitment becomes all the more
+      consequential.
     </p>
     <p class="intro" style="margin-top:1.5rem;">
-      This dataset gives us a way to study the rules and language used in real public
-      job postings. Since these bulletins come directly from the City of Los Angeles,
-      they show how jobs are officially described and how requirements are
-      presented to applicants. However, this dataset also has limits. The bulletins
-      show job requirements and salary information, but they do not show who
-      applied, who was hired, or the personal experiences of workers. Because of this,
-      our project focuses on how access is structured through job postings.
+      Despite these principles, standardized systems are not insulated from the societal inequalities that
+      surround them. The way a municipal job describes its required skills, physical demands, and educational
+      qualifications affects how applicants perceive and assess their own opportunities and potential for
+      success.
+    </p>
+  </div>
+</section>
+
+<!-- NARRATIVE: METHODOLOGY -->
+<section class="read-intro-section" style="padding-top:0;">
+  <div class="container-narrow reveal">
+    <h3 style="font-family:var(--font-serif); font-size:1.35rem; font-weight:600; margin-bottom:1rem;">Methodology: decoding the language of hiring.</h3>
+    <p class="intro">
+      To evaluate how access is structured across job postings, our methodology relies on computational text
+      analysis of a purposeful dataset of 683 official City of Los Angeles civil service job bulletins. From these
+      documents we extracted key variables: salary ranges (specifically the annual salary midpoint), minimum
+      formal education requirements, minimum required years of experience, and examination types
+      (open-competitive versus promotional). To identify broader trends, we organized jobs into five distinct
+      sectors: Public Safety, Administration, Technical/Engineering, Skilled Trades, and Health/Social Services.
     </p>
     <p class="intro" style="margin-top:1.5rem;">
-      Access to public employment is an important topic because city jobs can
-      provide stable income, benefits, and long-term career opportunities. For many
-      communities in Los Angeles, government jobs have played an important role in
-      creating economic stability. Looking at who qualifies for different positions can
-      help us understand how these opportunities are organized and distributed.
+      Text mining techniques allow researchers to move beyond smaller-scale observations and extract skills,
+      qualifications, and hidden biases from large quantities of text (<a href="resources.html">Kobayashi et al.</a>;
+      <a href="resources.html">Senger et al.</a>). Modern deep learning models and natural language processing
+      tools have enabled automated classification of hiring criteria at scale (<a href="resources.html">Senger et al.</a>).
+      However, applying computational tools requires understanding the limitations they carry. Foundational
+      research reveals that human-written text, and the algorithms used to process it, are rarely neutral. Word
+      embeddings trained on large text corpora encode social stereotypes, mathematically producing
+      associations like "man is to computer programmer as woman is to homemaker"
+      (<a href="resources.html">Bolukbasi et al.</a>). These patterns are not random. They are inherited from
+      biases already present in human language. Consequently, algorithmic hiring systems and automated
+      resume screeners reproduce demographic biases related to gender, race, and age
+      (<a href="resources.html">Fabris et al.</a>). By studying the explicit language in City of Los Angeles
+      bulletins, we can identify how opportunities are officially framed and limited before an applicant ever
+      encounters a screening algorithm or takes a civil service exam.
+    </p>
+  </div>
+</section>
+
+<!-- NARRATIVE: SUBTLE GATEKEEPERS -->
+<section class="read-intro-section" style="padding-top:0;">
+  <div class="container-narrow reveal">
+    <h3 style="font-family:var(--font-serif); font-size:1.35rem; font-weight:600; margin-bottom:1rem;">The subtle gatekeepers: language, bias, and applicant self-selection.</h3>
+    <p class="intro">
+      Job advertisements do much more than list administrative duties and salary bands. They function as
+      recruitment and organizational communication tools that shape the applicant pool through
+      self-selection (<a href="resources.html">Mahmoud et al.</a>; <a href="resources.html">Uggerslev et al.</a>).
+      Throughout the recruiting process, predictors such as compensation, organizational image, and
+      advertisement framing aggressively influence whether an individual decides to apply
+      (<a href="resources.html">Uggerslev et al.</a>).
     </p>
     <p class="intro" style="margin-top:1.5rem;">
-      Our project connects to previous research about hiring practices, job
-      requirements, and inequality in employment. Many researchers have shown
-      that job postings can influence who applies for certain positions. The way a job
-      describes skills, experience, and qualifications can affect how people
-      understand their own opportunities. Research on hiring language, recruitment,
-      and workplace diversity also shows that employment systems can still create
-      unequal results even when they use standardized processes.
+      Sociological and linguistic research show that job postings often use coded language that reinforces
+      systemic inequalities. In an influential study, researchers combined textual analysis and laboratory
+      experiments to show that job advertisements in male-dominated occupations are significantly more
+      likely to contain masculine-coded language such as "competitive," "dominant," and "leader"
+      (<a href="resources.html">Gaucher et al.</a>). This type of wording lowers women's anticipated sense of
+      belonging and reduces their interest in applying, even when their formal qualifications match the job
+      requirements perfectly (<a href="resources.html">Gaucher et al.</a>). This dynamic operates at massive
+      scale. An analysis of a large dataset of online job postings found that masculine-coded language appears
+      far more often in higher-paying and senior positions, while feminine-coded language concentrates in
+      lower-paying occupations (<a href="resources.html">Castilla and Rho</a>). In the context of Los Angeles,
+      this provides a lens for comparing traditionally masculine domains like Public Safety and
+      Technical/Engineering against Administrative or Health/Social Services roles.
     </p>
     <p class="intro" style="margin-top:1.5rem;">
-      Many existing studies focus on private companies, online hiring platforms, or
-      individual applicants. Our project looks at a city government system, where
-      official exams, job classifications, and promotion rules play a large role. These
-      systems are often viewed as objective because they use written requirements
-      and public processes. At the same time, the way these requirements are
-      designed can affect who enters the system and who has opportunities to
-      advance.
+      This dynamic is not limited to the private sector. Research focusing specifically on public-sector
+      recruitment confirms that language in government job postings actively shapes whether applicants elect
+      themselves as a proper fit. More feminine wording in public job advertisements is directly associated
+      with a higher number and larger overall share of female applicants in the candidate pool
+      (<a href="resources.html">Sievert et al.</a>). Linguistic gatekeeping also extends beyond gender.
+      Large-scale computational text analyses show that job advertisements encode demographic expectations
+      that reinforce both racial and gender segregation across the labor force, implicitly signaling who
+      "belongs" in particular roles (<a href="resources.html">Hu et al.</a>). Similarly, youth-coded language in
+      job advertisements has been proven to predict age discrimination, linking linguistic signals to measurably
+      lower callback rates for older applicants (<a href="resources.html">Burn et al.</a>). Together, these
+      studies confirm that the text of a job bulletin is an active participant in labor market segregation.
+    </p>
+  </div>
+</section>
+
+<!-- NARRATIVE: FRAMING THE PUBLIC GOOD -->
+<section class="read-intro-section" style="padding-top:0;">
+  <div class="container-narrow reveal">
+    <h3 style="font-family:var(--font-serif); font-size:1.35rem; font-weight:600; margin-bottom:1rem;">Framing the public good: diversity and motivational signals.</h3>
+    <p class="intro">
+      For a massive municipality like the City of Los Angeles, diversity mandates and community
+      representation are serious administrative concerns. Many civil service bulletins include formal Equal
+      Employment Opportunity (EEO) language and diversity statements, particularly in departments concerned
+      with demographic representation and public accountability. However, standardizing diversity through
+      EEO statements can produce complicated and sometimes counterintuitive results. While explicit
+      diversity-related messaging can increase organizational attraction among some minority applicants, its
+      effectiveness depends heavily on the perceived credibility of the message and the organization's broader
+      reputation (<a href="resources.html">Heath et al.</a>). In highly competitive job contexts, EEO language
+      can even backfire, influencing applicant self-selection in ways that undermine the assumption that
+      diversity statements always increase diversity (<a href="resources.html">Leibbrandt and List</a>).
     </p>
     <p class="intro" style="margin-top:1.5rem;">
-      Through computational text analysis, we study patterns across Los Angeles civil
-      service job bulletins. We ask how the system defines qualifications and rewards
-      different types of work. We examine questions such as: How much does
-      education affect salary? How does work experience relate to pay? How do
-      internal promotion systems influence career opportunities?
+      The actual framing of the work proves to be a much stronger driver of applicant diversity. A pivotal field
+      experiment in police recruitment demonstrated that job advertisements emphasizing community service,
+      collaboration, and helping the public attracted significantly more applications from women and minority
+      candidates than advertisements using traditional law-enforcement-oriented messaging
+      (<a href="resources.html">Linos</a>). This finding is directly relevant to interpreting Los Angeles Police
+      Department job bulletins. More broadly across the public sector, job advertisements that explicitly
+      highlight public service values are highly effective at attracting candidates motivated by a public service
+      mission, showing how language can shape applicant behavior well beyond formal credential requirements
+      (<a href="resources.html">Vogel et al.</a>).
     </p>
-    <p class="intro" style="margin-top:1.5rem;">
-      Our findings suggest that salary and career opportunities are connected to
-      multiple factors. Education and experience matter, but they do not explain
-      every difference we see in the data. Job categories and access to promotion
-      pathways also appear to play important roles. By studying these patterns, our
-      project shows how a system based on merit can still contain hidden factors that
-      shape who gets access to different opportunities.
+    <p class="intro" style="margin-top:2rem; font-style:italic; color:var(--muted);">
+      With this theoretical framework established, the five findings below map our data against these patterns
+      and answer directly how the City of Los Angeles structures access through its bulletins.
     </p>
   </div>
 </section>
@@ -128,10 +203,12 @@
   <div class="container-narrow reveal">
     <p class="eyebrow" style="margin-bottom:1rem;">Reading the chapter</p>
     <p class="intro">
-      The following sections connect our data visualizations with the main questions
-      of this project. Together, these findings show how Los Angeles civil service
-      opportunities are shaped by education, experience, job categories, and the rules
-      that organize career movement within the system.
+      The following five sections connect our data visualizations with the main questions
+      of this project. Findings 01 through 04 build the case step by step: sector pay gaps,
+      the credential inversion, the weakness of experience as a salary predictor, and the
+      insider advantage of promotional exams. Finding 05 synthesizes them all in a single
+      heatmap that puts sector and education level in the same frame and shows which force
+      is dominant.
     </p>
   </div>
 </section>
@@ -144,22 +221,21 @@
       <h2 class="finding-h2">Average Annual Salary by City Job Classification Sector</h2>
     </div>
     <figure class="finding-figure reveal">
-      <img src="images/viz1.png" alt="Horizontal bar chart of average annual salary by City of LA job classification sector, with standard deviation error bars." />
-      <figcaption class="finding-cap">Figure 01. Horizontal bar chart. Mean annual salary midpoint across five sectors of City of LA bulletins, with ±1 SD error bars (n = 680 with valid salary data).</figcaption>
+      <img src="images/viz1_salary_by_sector.png" alt="Horizontal bar chart of average annual salary by City of LA job classification sector, with standard deviation error bars." />
+      <figcaption class="finding-cap">Figure 01. Horizontal bar chart. Mean annual salary midpoint for each of five City of LA job sectors, sorted ascending by mean, with ±1 SD error bars. Job count (n) is annotated beyond each error bar. Based on 680 bulletins with valid salary data.</figcaption>
     </figure>
     <div class="finding-body">
       <div class="finding-rq reveal">
         <p class="eyebrow" style="margin-bottom:0.75rem;">Research question</p>
-        <p>How do average salaries differ across City of Los Angeles job sectors? What can these differences show about the relationship between job categories and economic opportunities within the civil service system?</p>
+        <p>How do average salaries differ across City of Los Angeles job sectors, and what do those differences reveal about which kinds of labor the civil service system values most?</p>
       </div>
       <div class="finding-key reveal">
         <p class="eyebrow" style="margin-bottom:0.75rem;">Meaning in context</p>
-        <p class="key">This visualization shows that salary levels vary across different types of City jobs. Public Safety and Technical/Engineering positions have some of the highest average salary midpoints in this dataset, while Administrative and Trades/Infrastructure positions appear lower. This pattern suggests that job sector may play an important role in shaping salary outcomes.</p>
+        <p class="key">The chart makes the sector hierarchy immediately visible: Public Safety and Technical/Engineering anchor the top of the pay scale, while Administrative positions is by far the largest sector at n = 397 sits at the bottom. This is not simply a reflection of different skill demands; it reflects historical and political decisions about which fields the City has chosen to invest in.</p>
         <div class="finding-analysis">
-          <p>This finding connects to our larger question about whether qualifications alone explain differences within the civil service system. If education and experience were the only factors related to salary, we might expect jobs with similar requirements to have similar pay levels. However, the differences across sectors suggest that the type of work and the career structure surrounding each field may also influence compensation.</p>
-          <p>These salary differences may come from many factors, including required skills, certifications, training processes, labor agreements, job risks, and historical decisions about how different positions are organized. Because of this, salary should be understood as part of a larger employment system rather than only a reflection of individual qualifications.</p>
-          <p>This pattern matters because City jobs can provide important paths toward stable income and career growth. By examining which sectors have higher salary ranges, we can better understand how opportunities are distributed across different areas of public employment.</p>
-          <p>This visualization also has limitations. The chart compares salary by sector, but it does not include information about individual workers, applicants, or hiring outcomes. It cannot fully explain why these differences exist. The Health/Social Services category also contains only nine job bulletins, so we treat this result carefully and see it as a question for further research.</p>
+          <p>The error bars tell a second story alongside the averages. Trades/Infrastructure and Technical/Engineering both show wide standard deviations, indicating that each sector contains a compressed ladder, from entry-level positions to highly paid supervisory or specialized roles. Administrative jobs, by contrast, show a narrower spread, suggesting that workers in that sector face a lower ceiling regardless of how long they stay or how much experience they accumulate.</p>
+          <p>This finding sets the frame for all four visualizations that follow. If job sector is already this strongly associated with salary before we factor in education or experience, then credentials cannot be the primary driver of compensation in the civil service system. The question shifts from "do qualifications predict pay?" to "does sector assignment override everything else?" and the next charts answer that directly.</p>
+          <p>One important limitation: the Health/Social Services category contains only nine bulletins, which is not enough to draw confident conclusions about that sector. We include it for completeness but treat it as a signal for further investigation rather than a firm finding.</p>
         </div>
       </div>
     </div>
@@ -174,22 +250,22 @@
       <h2 class="finding-h2">Average Annual Salary by Required Education Level</h2>
     </div>
     <figure class="finding-figure reveal">
-      <img src="images/viz2.png" alt="Vertical bar chart of average salary by required education level across City job classifications, with job count annotations above each bar." />
-      <figcaption class="finding-cap">Figure 02. Vertical bar chart. Mean salary midpoint at each of five ordered education tiers — No Formal Requirement → High School → Some College → Bachelor's → Graduate — with job count (n) annotated above each bar.</figcaption>
+      <img src="images/viz2_salary_by_education.png" alt="Vertical bar chart of average salary by required education level across City job classifications, with job count annotations above each bar." />
+      <figcaption class="finding-cap">Figure 02. Vertical bar chart. Mean salary midpoint at each of five ordered education tiers: None / Experience-Based -> High School -> Some College -> Bachelor's -> Graduate with ±95% CI error bars and job count (n) annotated above each bar. Based on 680 bulletins with valid salary data.</figcaption>
     </figure>
     <div class="finding-body">
       <div class="finding-rq reveal">
         <p class="eyebrow" style="margin-bottom:0.75rem;">Research question</p>
-        <p>How do education requirements relate to average salaries in City of Los Angeles civil service jobs? Do positions requiring higher levels of formal education always have higher salary ranges, or do other factors also influence compensation?</p>
+        <p>Do higher formal education requirements in City of Los Angeles job bulletins consistently predict higher annual salaries, or do credential requirements operate independently of compensation, functioning as access barriers rather than markers of valued expertise?</p>
       </div>
       <div class="finding-key reveal">
         <p class="eyebrow" style="margin-bottom:0.75rem;">Meaning in context</p>
-        <p class="key">This visualization explores the relationship between education requirements and salary levels. The overall pattern shows that jobs requiring higher education often have higher average salaries, but the increase is not perfectly consistent across all categories.</p>
+        <p class="key">The bars do not rise cleanly from left to right. The most striking anomaly is at the bottom of the scale: "None / Experience-Based" jobs (n = 405) average a higher salary than "High School" jobs (n = 13). If credentials reliably signaled job complexity and fair pay, that inversion should not exist. It does exist and it points directly to the thesis.</p>
         <div class="finding-analysis">
-          <p>If education level was the only factor connected to salary, we might expect the bars to increase evenly from no formal requirement to graduate degree. However, the data shows a more complex pattern. Jobs without a formal education requirement have a slightly higher average salary than jobs requiring a high school diploma or GED. Some of these positions may involve specialized skills, training programs, certifications, or work experience that are not measured through traditional education levels.</p>
-          <p>This finding connects to our larger question about how the civil service system defines qualifications. Education requirements can create important standards for certain positions, but they do not fully explain how salaries are organized across different jobs. Other factors, such as job sector, technical skills, licenses, and career pathways, may also shape compensation.</p>
-          <p>This pattern is important because education requirements influence who is eligible to apply for certain positions. When a degree requirement exists, it can affect access for applicants with different educational backgrounds. Understanding the relationship between education and salary helps us examine whether formal credentials consistently lead to greater economic opportunities within public employment.</p>
-          <p>At the same time, this visualization has limitations. The chart only compares stated education requirements and salary ranges from job bulletins. It does not include individual applicants, worker backgrounds, job performance, or final hiring outcomes. Because of this, the data helps us identify patterns in job requirements, but it cannot explain every reason behind salary differences.</p>
+          <p>The reason for the inversion becomes clear when you connect this chart back to Finding 01. The 405 jobs with no formal education requirement are not a monolith. They include Trades/Infrastructure and Public Safety positions which are sectors with some of the highest average salaries in the entire dataset, alongside Administrative roles where experience substitutes for a degree. Meanwhile, the 13 jobs that require only a High School diploma are concentrated in lower-wage clerical and support roles. The education label is not predicting salary; the sector assignment underneath it is.</p>
+          <p>The Graduate tier does reach the highest average salary, and the bachelor's tier is meaningfully above "Some College," which suggests that credential requirements are not irrelevant. But the relationship is far from linear. A worker who enters a trade or public safety role with no formal education requirement can expect to out-earn a worker in a high-school-required administrative role and, in many cases, a worker in a bachelor's-required administrative role as well.</p>
+          <p>This matters because education requirements shape who can even apply. A bachelor's degree requirement placed on an administrative analyst posting filters out candidates without a four-year credential but the salary that comes with it may be no higher than what a credentialed trade worker earns without that barrier. The gatekeeping function of the requirement does not correspond to a wage premium that would justify it.</p>
+          <p>One methodological note: the 95% confidence interval bars are wide for smaller categories, especially High School (n = 13). The average for that tier should be read cautiously. The much larger "None / Experience-Based" (n = 405) and "Bachelor's" (n = 133) categories are far more stable.</p>
         </div>
       </div>
     </div>
@@ -204,22 +280,22 @@
       <h2 class="finding-h2">Required Work Experience vs. Annual Salary Midpoint by Sector</h2>
     </div>
     <figure class="finding-figure reveal">
-      <img src="images/viz3.png" alt="Scatter plot of required years of experience versus annual salary midpoint, colored by sector, with OLS trend line." />
-      <figcaption class="finding-cap">Figure 03. Scatter plot. Minimum required years of experience on the x-axis, annual salary midpoint on the y-axis, color-coded by sector, with an OLS trend line overlaid.</figcaption>
+      <img src="images/viz3_experience_and_salary.png" alt="Scatter plot of required years of experience versus annual salary midpoint, colored by sector, with OLS trend line." />
+      <figcaption class="finding-cap">Figure 03. Scatter plot. Minimum required years of experience on the x-axis, annual salary midpoint on the y-axis, color-coded by sector. Global OLS trend line overlaid with slope labeled in the legend (slope ≈ $3,747/yr). Based on 612 of 680 bulletins with parseable experience requirements.</figcaption>
     </figure>
     <div class="finding-body">
       <div class="finding-rq reveal">
         <p class="eyebrow" style="margin-bottom:0.75rem;">Research question</p>
-        <p>How does required work experience relate to salary levels in City of Los Angeles civil service jobs? Does more required experience always connect with higher compensation, or do other factors also influence salary differences?</p>
+        <p>How does the minimum required years of work experience in City job bulletins relate to salary midpoints across job classifications, and does accumulated experience reliably translate into higher compensation or do other structural factors override that relationship?</p>
       </div>
       <div class="finding-key reveal">
         <p class="eyebrow" style="margin-bottom:0.75rem;">Meaning in context</p>
-        <p class="key">This visualization explores whether years of required experience can explain salary differences across City jobs. The chart shows a general relationship between experience and salary, but the pattern is not completely consistent. Jobs with similar experience requirements can still have very different salary levels.</p>
+        <p class="key">The OLS trend line rises. Experience and salary are positively associated, but the slope is just $3,747 per additional required year. The salary range in this dataset spans roughly $50,000 to $275,000. A trend that adds less than $4,000 per year of required experience across that entire spread is, practically speaking, flat. What the chart actually shows is not a gradient but a cloud, with sector identity doing far more work than the experience requirement itself.</p>
         <div class="finding-analysis">
-          <p>Some positions that require fewer years of experience have relatively high salary ranges, while some positions requiring more experience appear at lower salary levels. This suggests that experience requirements alone do not fully explain how compensation is organized across civil service jobs.</p>
-          <p>The differences between sectors provide another important layer of analysis. Public Safety and Technical/Engineering positions often appear in higher salary ranges, while many Administrative positions are concentrated at lower salary levels. This pattern suggests that job category, specialized skills, training requirements, and career structures may also contribute to salary differences.</p>
-          <p>This finding connects to our larger question about how the civil service system defines qualifications. Experience is an important part of many job requirements, but the data suggests that years of experience do not translate into the same salary outcomes across every field.</p>
-          <p>This visualization also has limitations. The chart only shows the minimum experience listed in job bulletins. It does not include information about individual workers, previous career paths, promotions, or hiring decisions. Because of this, the visualization helps identify relationships between experience and salary, but it cannot fully explain why those relationships exist.</p>
+          <p>The vertical spread at any fixed point on the x-axis is the chart's most important feature. At x = 2 years of required experience, the most heavily populated column, salaries range from roughly $50,000 to over $230,000. That $180,000 gap between the lowest and highest point in the same experience column cannot be explained by experience. It is explained by sector. The highest points at 2 years are Technical/Engineering (red), which cluster near the top of the salary range there, while the lowest are Administrative (blue) roles with similar experience requirements but far lower pay.</p>
+          <p>The single highest point on the entire chart, an Administrative job at approximately $275,000 with near zero years of required experience, is an outlier that illustrates a separate dynamic: a small number of senior executive or director-level administrative roles command exceptional salaries without formal experience requirements, likely because they are political appointments or specialized leadership positions. This does not change the overall pattern but serves as a reminder that "Administrative" is a broad catch-all category.</p>
+          <p>Most jobs in this dataset require between 0 and 4 years of experience; very few extend past 5. The points thin out sharply after x = 4, which means the right tail of the trend line is based on a small number of outliers. The OLS slope is pulled up by a few high-experience, mid-salary Administrative points at x = 5–7 and should not be read as a reliable prediction at those experience levels.</p>
+          <p>This visualization also has an important methodological limit. The experience values we parse are the minimums stated in the bulletin requirements, not the actual tenure of anyone currently employed in these roles. Promotional positions, which tend to pay more, often list experience requirements that can only be met by existing City employees. So in part, this chart is measuring how long you must already be inside the system to qualify for its higher-paying internal roles, not the open-market value of experience itself.</p>
         </div>
       </div>
     </div>
@@ -234,22 +310,52 @@
       <h2 class="finding-h2">Salary Midpoint Distribution: Promotional vs. Open-Competitive Exams by Sector</h2>
     </div>
     <figure class="finding-figure reveal">
-      <img src="images/viz4.png" alt="Box plot of salary midpoint distributions for promotional and open-competitive exams, grouped by sector." />
-      <figcaption class="finding-cap">Figure 04. Box plot. Salary midpoint distributions for promotional (current City employees only) vs. open-competitive (all applicants) exam pathways, grouped by sector, with outlier dots shown for all groups.</figcaption>
+      <img src="images/viz4_promo_vs_open_boxplot.png" alt="Box plot of salary midpoint distributions for promotional and open-competitive exams, grouped by sector." />
+      <figcaption class="finding-cap">Figure 04. Box plot. Salary midpoint distributions for Promotional (current City employees only) vs. Open Competitive (all applicants) exam pathways, grouped by sector and sorted by descending median salary. Outlier dots shown for all groups. Sample counts: Administrative: Promotional n = 165, Open Competitive n = 232; Public Safety: Promotional n = 29, Open Competitive n = 21; Technical/Engineering: Promotional n = 65, Open Competitive n = 63; Trades/Infrastructure: Promotional n = 51, Open Competitive n = 45; Health/Social Svcs: Promotional n = 1, Open Competitive n = 8.</figcaption>
     </figure>
     <div class="finding-body">
       <div class="finding-rq reveal">
         <p class="eyebrow" style="margin-bottom:0.75rem;">Research question</p>
-        <p>How do salary distributions differ between promotional and open-competitive civil service positions? What can these differences show about the role of internal career pathways in the City of Los Angeles employment system?</p>
+        <p>What does the distribution of salary ranges for internally-restricted (promotional) versus open-competitive City job classifications reveal about who the civil service structure rewards, and how does the insider advantage vary across job sectors?</p>
       </div>
       <div class="finding-key reveal">
         <p class="eyebrow" style="margin-bottom:0.75rem;">Meaning in context</p>
-        <p class="key">This visualization examines how different exam pathways relate to salary opportunities within the civil service system. While the system uses standardized exams and public requirements, different types of exams may create different career pathways. Across several job sectors, promotional positions tend to have higher salary midpoints than open-competitive positions.</p>
+        <p class="key">In every sector where a meaningful comparison is possible, the Promotional box sits higher than the Open Competitive box. The insider advantage is not a quirk of one field, it is a structural feature of the system. Employees who are already inside have access to a higher-paying tier of jobs that external applicants cannot reach no matter their qualifications.</p>
         <div class="finding-analysis">
-          <p>Across several job sectors, promotional positions tend to have higher salary midpoints than open-competitive positions. This pattern suggests that internal career movement may be connected to access to higher-paying roles within the City system.</p>
-          <p>This finding helps us understand that career opportunities are shaped by more than initial qualifications. After entering the civil service system, employees may gain access to additional opportunities through internal promotions, accumulated experience, and career advancement structures.</p>
-          <p>When compared with the education and experience visualizations, this chart adds another layer to our research question. Salary differences are related to multiple factors, including education, experience, job sector, and access to different exam pathways. These factors work together to shape how people move through public employment systems.</p>
-          <p>However, this visualization also has limitations. The data shows salary differences between exam types, but it does not show individual career histories or explain why specific employees move into promotional roles. It also does not include applicant backgrounds or hiring results. Because of this, we interpret promotional access as one important factor connected to salary patterns rather than the only explanation.</p>
+          <p>The pattern is sharpest in Public Safety, where Promotional jobs (n = 29) slightly outnumber Open Competitive ones (n = 21) and the salary distributions diverge the most visibly. Many Public Safety roles are structured as promotion ladders, Detective, Sergeant, Captain, where incumbents move up through internal exams. An outside applicant can enter at the bottom, but the higher-paid rungs are closed to them entirely.</p>
+          <p>Technical/Engineering tells a similar story with almost equal numbers on each side (n = 65 Promotional vs. n = 63 Open Competitive). The median Promotional salary is higher there as well, suggesting that even in a credentialed field where outside talent is plentiful, the system still carves out a better-compensated internal track.</p>
+          <p>Administrative is the most numerically dominant sector (n = 165 Promotional vs. n = 232 Open Competitive), and even here the Promotional median is visibly elevated. This is important because Administrative is also the sector with the lowest overall pay from Finding 01. In other words, even in the lowest-paying sector of City government, being an insider is worth more than being an outsider with the same listed qualifications.</p>
+          <p>Together with the findings on education and experience, this chart completes a picture: the civil service system is not a single meritocracy but two overlapping ones, one for people already inside, and one for people trying to get in. The higher-salary jobs in every sector are disproportionately gated behind an internal-only exam process that external applicants, no matter how qualified, cannot sit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINDING 05 -->
+<section class="finding-section paper">
+  <div class="container-prose">
+    <div class="finding-head reveal">
+      <span class="finding-n">05</span>
+      <h2 class="finding-h2">Mean Salary by Sector and Required Education Level</h2>
+    </div>
+    <figure class="finding-figure reveal">
+      <img src="images/heatmap_sector_edu_salary.png" alt="Heatmap showing mean annual salary midpoint for each combination of job sector (rows) and required education level (columns), with darker cells indicating higher pay." />
+      <figcaption class="finding-cap">Figure 05. Heatmap. Mean annual salary midpoint for each of the 25 sector × education-level combinations. Rows = five job sectors ordered by overall salary (Trades/Infrastructure at top, Administrative at bottom). Columns = five education tiers ordered lowest to highest credential (None / Experience-Based through Graduate). Color scale: darker orange to red = higher salary. Cells with no jobs are left blank. Based on 680 bulletins with valid salary data.</figcaption>
+    </figure>
+    <div class="finding-body">
+      <div class="finding-rq reveal">
+        <p class="eyebrow" style="margin-bottom:0.75rem;">Research question</p>
+        <p>Does the credential-salary relationship hold consistently across every job sector, or does it break down differently depending on the type of work. If so, which force is stronger, the sector a job belongs to, or the education it requires?</p>
+      </div>
+      <div class="finding-key reveal">
+        <p class="eyebrow" style="margin-bottom:0.75rem;">Meaning in context</p>
+        <p class="key">If formal education reliably determined pay, every row in this heatmap would brighten uniformly from left to right moving from "None / Experience-Based" toward "Graduate." Instead, the rows stay roughly consistent in color across education levels, while the rows themselves differ dramatically from each other. Sector assignment, not credential level, is the dominant driver of salary in this dataset.</p>
+        <div class="finding-analysis">
+          <p>The Trades/Infrastructure and Public Safety rows are the clearest evidence. Both remain in the darker orange to red range even in the leftmost column, jobs that require no formal education credential at all. A Trades/Infrastructure job with no education requirement pays more, on average, than a Graduate-level Administrative job. That single comparison is the most direct test of the thesis this project advances: credential barriers in the City of LA civil service system do not consistently map onto compensation outcomes.</p>
+          <p>The Administrative row tells the other half of the story. Moving from "None / Experience-Based" to "Graduate" in Administrative does produce a color gradient. The cells do get somewhat darker as credentials increase but the gradient is shallower than you might expect, and the entire row sits below the Trades and Public Safety rows at every education level. A graduate-credentialed administrative worker is out-earned by an experience-only trades worker. The credential premium exists within the sector but cannot overcome the sector penalty.</p>
+          <p>This visualization synthesizes Findings 01 and 02 in a single frame. Finding 01 established that sector predicts salary. Finding 02 showed that education does not predict salary in a clean linear way. This heatmap shows the two variables interact. Education's effect on pay is real but operates differently depending on which sector you are in. In high-salary sectors like Trades and Public Safety, education level barely matters. In lower-salary sectors like Administrative, it matters modestly. In neither case does it override the sector effect.</p>
+          <p>One limitation applies here as well. Some cells represent very few jobs. Health/Social Services in particular has only nine bulletins total, so the cells in that row should be read as approximate rather than definitive. The patterns in the larger sectors like Administrative (n = 397), Technical/Engineering (n = 128), Trades/Infrastructure (n = 96) are far more statistically robust.</p>
         </div>
       </div>
     </div>
@@ -265,11 +371,11 @@
       <div class="reveal">
         <p class="conc-h3">Key takeaways</p>
         <ul class="conc-list tighter">
-          <li><span class="conc-arrow">→</span><span>Job sector appears to be an important factor related to salary differences across City of Los Angeles civil service positions. Education level alone does not explain all salary patterns in the dataset.</span></li>
-          <li><span class="conc-arrow">→</span><span>Higher education requirements are generally connected with higher salaries, but the relationship is not perfectly linear across all education levels. Formal credentials influence access to certain positions, but they do not always predict compensation by themselves.</span></li>
-          <li><span class="conc-arrow">→</span><span>Required work experience relates to salary in different ways across job sectors. The same number of required years does not always lead to the same salary outcomes.</span></li>
-          <li><span class="conc-arrow">→</span><span>Promotional exam pathways tend to have higher salary distributions than open-competitive pathways, especially in sectors such as Public Safety and Technical/Engineering.</span></li>
-          <li><span class="conc-arrow">→</span><span>Together, these patterns suggest that civil service opportunities are shaped by multiple factors, including education, experience, job categories, and internal career pathways.</span></li>
+          <li><span class="conc-arrow">→</span><span>Job sector is the strongest predictor of salary in this dataset. Public Safety and Technical/Engineering anchor the top of the pay scale; Administrative sits at the bottom regardless of the credential level attached to individual roles.</span></li>
+          <li><span class="conc-arrow">→</span><span>The education-to-salary relationship is not linear. "None / Experience-Based" jobs (n = 405) average a higher salary than "High School" jobs (n = 13), because the former category is dominated by high-paying Trades and Public Safety roles. Credentials function as access filters, not reliable wage predictors.</span></li>
+          <li><span class="conc-arrow">→</span><span>Required work experience has a positive but weak association with salary across the full dataset. The OLS slope is positive, but sector clusters explain far more of the variation: Public Safety jobs require little experience and pay the most; Administrative jobs often require more experience and pay less.</span></li>
+          <li><span class="conc-arrow">→</span><span>In every sector with sufficient data, Promotional (insider-only) exam pathways carry higher salary distributions than Open Competitive ones. The insider advantage is structural, not incidental. It appears in the lowest-paid sector (Administrative) as well as the highest-paid (Public Safety).</span></li>
+          <li><span class="conc-arrow">→</span><span>The sector × education heatmap confirms that sector dominates credential as a salary predictor. A Trades/Infrastructure job with no formal education requirement out-earns a Graduate-level Administrative job. Education's effect on pay is real but contingent on which sector you are in.</span></li>
         </ul>
       </div>
       <div class="reveal">
@@ -278,8 +384,10 @@
           <li><span>— Job bulletins describe official requirements and salary ranges, but they do not show final hiring decisions or employee experiences.</span></li>
           <li><span>— The dataset does not include individual applicant information, exam scores, demographic data, or hiring records.</span></li>
           <li><span>— Snapshot in time; salaries are not CPI-adjusted across publication dates.</span></li>
-          <li><span>— Five-sector classification is a researcher choice and condenses real heterogeneity.</span></li>
-          <li><span>— Health / Social Services subsample (n = 9) is too thin for confident claims.</span></li>
+          <li><span>— Five-sector classification is a researcher choice and condenses real heterogeneity within each category.</span></li>
+          <li><span>— Health / Social Services subsample (n = 9) is too thin for confident claims; treat any result for that sector with caution.</span></li>
+          <li><span>— Several cells in the sector × education heatmap contain very few jobs; sparse cells (particularly in Health / Social Services) should be read as approximate rather than definitive.</span></li>
+          <li><span>— Experience values are bulletin minimums, not actual worker tenure. Promotional roles frequently list requirements that only incumbents can meet, which partially confounds the experience-to-salary analysis.</span></li>
         </ul>
       </div>
     </div>
@@ -302,6 +410,7 @@
       <ul class="footer-list">
         <li><a href="index.html">Home</a></li>
         <li><a href="data.html">Data</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
         <li><a href="narrative.html">Narrative</a></li>
         <li><a href="resources.html">Resources</a></li>
       </ul>

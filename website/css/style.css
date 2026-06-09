@@ -509,7 +509,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 .team-footnote { margin-top: 2.5rem; font-family: var(--font-sans); font-size: 0.875rem; color: var(--muted); }
 
 /*  CTA CARDS  */
-.cta-section { background: var(--background); padding: 5rem 0; }
+.cta-section { background: var(--paper); padding: 5rem 0; }
 .cta-grid {
   display: grid; gap: 1.5rem;
 }
@@ -1052,6 +1052,58 @@ ul { list-style: none; padding: 0; margin: 0; }
 .timeline-card.highlight .timeline-card-tag   { color: var(--gold-soft); }
 .timeline-card.highlight .timeline-year-mobile { color: var(--gold-soft); }
 .timeline-dot-inner.highlight { background: var(--gold); border-color: var(--navy); }
+
+/*  ABOUT PAGE: Level stepper  */
+.level-stepper {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2.5rem;
+}
+.level-step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+.level-step-circle {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  font-family: var(--font-serif);
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.level-step-name {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--muted);
+  text-align: center;
+}
+.level-step-connector {
+  flex: 1;
+  height: 2px;
+  background: var(--gold);
+  opacity: 0.3;
+  margin-top: 1.375rem;
+  min-width: 1.5rem;
+}
+.level-big-num {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+  opacity: 0.75;
+}
 
 /*  Helpers  */
 .mt-3 { margin-top: 0.75rem; }

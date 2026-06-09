@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Who Gets In?</title>
+  <meta name="description" content="About the Who Gets In? project: overview, methodology, team, and acknowledgments for a DH 101 investigation of credential barriers in the City of Los Angeles civil service." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container-prose site-header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-name">Who Gets In?</span>
+      <span class="brand-sub">DH 101 · UCLA</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="data.html">Data</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="narrative.html">Narrative</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-dots" aria-hidden="true"></div>
+  <div class="container-prose page-hero-inner">
+    <p class="eyebrow fade-in">Chapter 01</p>
+    <h1 class="fade-in-d1">About</h1>
+    <p class="page-hero-sub fade-in-d2">
+      Who we are, what we built, and the methodological choices behind a digital humanities
+      investigation of 683 City of Los Angeles civil service job bulletins.
+    </p>
+    <div class="page-hero-rule"></div>
+  </div>
+</section>
+
+<!-- PROJECT OVERVIEW -->
+<section class="split-section">
+  <div class="container-prose split-grid">
+    <div class="reveal">
+      <p class="eyebrow" style="margin-bottom:0.75rem;">Project overview</p>
+      <h2 class="split-h2">Who Gets In?</h2>
+    </div>
+    <div class="split-body reveal">
+      <p>
+        This project examines how the City of Los Angeles civil service system structures
+        access to public employment. Using <strong>683 official job bulletins</strong>
+        published by the Los Angeles Personnel Department, we analyze how education
+        requirements, work experience, salary ranges, and exam pathways shape who can
+        enter and advance within city government. Our central question is whether a system
+        designed around standardized merit actually produces equal access, or whether
+        the structure of its requirements creates barriers that go largely unexamined.
+      </p>
+      <p>
+        As a digital humanities project, it sits at the intersection of computational
+        text analysis and interpretive inquiry. The corpus gives us a large and uniform
+        set of institutional documents. The humanistic lens asks what those documents
+        mean, not only what they contain, and holds the analytical choices themselves
+        accountable.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNICAL DESCRIPTION: INTRO -->
+<section class="split-section paper">
+  <div class="container-prose split-grid">
+    <div class="reveal">
+      <p class="eyebrow" style="margin-bottom:0.75rem;">Technical description</p>
+      <h2 class="split-h2">Three levels, three sets of choices.</h2>
+    </div>
+    <div class="split-body reveal">
+      <p>
+        Our Digital Humanities project moves through three interconnected levels: sources,
+        processing, and presentation. Each level involves deliberate choices that shape
+        what questions can be asked, what patterns can be seen, and how meaning is
+        communicated to an audience. Below, we describe each level and explain the
+        reasoning behind our decisions.
+      </p>
+      <div class="level-stepper">
+        <div class="level-step-item">
+          <div class="level-step-circle">01</div>
+          <span class="level-step-name">Sources</span>
+        </div>
+        <div class="level-step-connector"></div>
+        <div class="level-step-item">
+          <div class="level-step-circle">02</div>
+          <span class="level-step-name">Processing</span>
+        </div>
+        <div class="level-step-connector"></div>
+        <div class="level-step-item">
+          <div class="level-step-circle">03</div>
+          <span class="level-step-name">Presentation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEVEL 1: SOURCES -->
+<section class="split-section">
+  <div class="container-prose split-grid">
+    <div class="reveal">
+      <p class="level-big-num">01</p>
+      <p class="eyebrow" style="margin-bottom:0.5rem; margin-top:0.75rem;">Level 1</p>
+      <h2 class="split-h2">Sources</h2>
+    </div>
+    <div class="split-body reveal">
+      <p>
+        Our primary source is the <strong>City of Los Angeles Job Bulletins dataset</strong>,
+        683 plain text civil service job bulletins published by the Los Angeles Personnel
+        Department. Each bulletin covers one job classification that contains its duties, minimum
+        qualifications, salary range, and application process, spanning roles from
+        administrative clerks and accountants to engineers, police officers, and zoo
+        curators. We chose it because these are official government documents, primary
+        sources that represent how the City formally defines and communicates employment
+        opportunity, which makes them especially well suited for a project concerned with
+        how access is structured through institutional language rather than simply
+        described by it.
+      </p>
+      <p>
+        One limitation applies throughout. The bulletins describe official requirements
+        and salary ranges, but they do not show who applied, who was hired, or how workers
+        experienced the process. Our analysis is an analysis of how opportunity is defined,
+        not of how it is actually lived. The full source description, scope, and critique
+        are available on the <a href="data.html" style="text-decoration:underline; text-decoration-color:var(--gold); text-decoration-thickness:2px; text-underline-offset:4px;">Data page</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- LEVEL 2: PROCESSING -->
+<section class="split-section paper">
+  <div class="container-prose split-grid">
+    <div class="reveal">
+      <p class="level-big-num">02</p>
+      <p class="eyebrow" style="margin-bottom:0.5rem; margin-top:0.75rem;">Level 2</p>
+      <h2 class="split-h2">Processing</h2>
+    </div>
+    <div class="split-body reveal">
+      <p>
+        We used <strong>Python with regex text extraction</strong> to transform 683
+        unstructured plain text files into a structured dataset of 21 defined fields,
+        covering job title, salary range, minimum education requirement, required years
+        of experience, and exam type. We then organized every job into one of five broad
+        sectors: <strong>Public Safety, Administration, Technical/Engineering,
+        Trades/Infrastructure, and Health/Social Services</strong> to enable meaningful
+        comparison across job categories.
+      </p>
+      <p>
+        This sector classification was developed by our team for this project. It allows
+        pattern analysis at a scale that would otherwise be impossible, but it necessarily
+        simplifies the real differences between individual positions within each category.
+        The complete cleaning and extraction pipeline is documented on the
+        <a href="data.html" style="text-decoration:underline; text-decoration-color:var(--gold); text-decoration-thickness:2px; text-underline-offset:4px;">Data page</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- LEVEL 3: PRESENTATION -->
+<section class="split-section">
+  <div class="container-prose split-grid">
+    <div class="reveal">
+      <p class="level-big-num">03</p>
+      <p class="eyebrow" style="margin-bottom:0.5rem; margin-top:0.75rem;">Level 3</p>
+      <h2 class="split-h2">Presentation</h2>
+    </div>
+    <div class="split-body reveal">
+      <p>
+        We present our findings through a public website organized around <strong>five
+        data visualizations</strong>, each paired with a research question and an extended
+        interpretive discussion. Our website integrates narrative
+        writing, data, and argument in a single publicly accessible space. It
+        supports navigation that is not strictly sequential, but a structure that suits a
+        project where each visualization contributes a distinct angle on a shared question
+        rather than building a single linear case.
+      </p>
+      <p>
+        We paired each visualization with extended prose rather than letting the data
+        stand alone, because the goal of this project is not only to display patterns
+        but to <strong>make an argument</strong> about what those patterns mean for how
+        public employment opportunity is structured.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team-section">
+  <div class="container-prose">
+    <p class="eyebrow" style="margin-bottom:0.75rem;">The team</p>
+    <h2 class="section-h2">Researchers &amp; Developers</h2>
+    <div class="team-grid">
+
+      <article class="team-card reveal">
+        <div class="team-row">
+          <div class="team-avatar" style="padding:0; overflow:hidden; flex-shrink:0;">
+            <img src="images/katie-lew.jpg" alt="Katie Lew" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+          <div>
+            <h3 class="team-name">Katie Lew</h3>
+            <p class="team-role">Researcher &amp; Content Designer</p>
+            <p class="team-bio">Fourth year Cognitive Science major at UCLA. </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="team-card reveal">
+        <div class="team-row">
+          <div class="team-avatar" style="padding:0; overflow:hidden; flex-shrink:0;">
+            <img src="images/jiayi-su.jpg" alt="Jiayi Su" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+          <div>
+            <h3 class="team-name">Jiayi Su</h3>
+            <p class="team-role">Researcher &amp; Content Designer</p>
+            <p class="team-bio">Third year Design Media Arts major at UCLA.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="team-card reveal">
+        <div class="team-row">
+          <div class="team-avatar" style="padding:0; overflow:hidden; flex-shrink:0;">
+            <img src="images/song-chen.jpg" alt="Song Chen" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+          <div>
+            <h3 class="team-name">Song Chen</h3>
+            <p class="team-role">Data Analyst</p>
+            <p class="team-bio">Fourth year Data Science major at UCLA.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="team-card reveal">
+        <div class="team-row">
+          <div class="team-avatar" style="padding:0; overflow:hidden; flex-shrink:0;">
+            <img src="images/hana-chloe-yoon.jpg" alt="Hana Chloe Yoon" style="width:100%; height:100%; object-fit:cover; display:block; transform:scale(2); transform-origin:50% 45%;" />
+          </div>
+          <div>
+            <h3 class="team-name">Hana Chloe Yoon</h3>
+            <p class="team-role">Software Developer</p>
+            <p class="team-bio">Third year Computer Science major at UCLA. </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="team-card reveal">
+        <div class="team-row">
+          <div class="team-avatar" style="padding:0; overflow:hidden; flex-shrink:0;">
+            <img src="images/linn-khant.jpg" alt="Linn Khant Thuya" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+          <div>
+            <h3 class="team-name">Linn Khant Thuya</h3>
+            <p class="team-role">Software Developer</p>
+            <p class="team-bio">Third year Computer Science major at UCLA.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="team-card reveal">
+        <div class="team-row">
+          <div class="team-avatar" style="padding:0; overflow:hidden; flex-shrink:0;">
+            <img src="images/khant-nyi.jpg" alt="Khant Nyi Hlaing" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+          <div>
+            <h3 class="team-name">Khant Nyi Hlaing</h3>
+            <p class="team-role">Software Developer</p>
+            <p class="team-bio">Third year Computer Science major at UCLA.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <p class="team-footnote">DH 101 — Introduction to Digital Humanities · UCLA · Spring 2026</p>
+  </div>
+</section>
+
+<!-- RESPONSIBILITIES -->
+<section class="split-section">
+  <div class="container-prose split-grid">
+    <div class="reveal">
+      <p class="eyebrow" style="margin-bottom:0.75rem;">Responsibilities</p>
+      <h2 class="split-h2">Who did what.</h2>
+    </div>
+    <div class="split-body reveal">
+      <p>
+        <strong>Katie Lew and Jiayi Su</strong> served as researchers and content
+        designers, leading the project's interpretive and narrative work. They were
+        responsible for developing the research questions, writing the project narrative
+        and visualization descriptions, and shaping the analytical argument across all
+        sections of the site.
+      </p>
+      <p>
+        <strong>Song Chen</strong> served as data analyst, overseeing the extraction,
+        cleaning, and structuring of the job bulletin dataset, as well as the production
+        of the four visualizations.
+      </p>
+      <p>
+        <strong>Chloe Yoon, Linn Khant, and Khant Nyi</strong> served as software
+        developers, building and maintaining the project website and ensuring that
+        visualizations and content were correctly implemented and publicly accessible.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ACKNOWLEDGMENTS -->
+<section class="split-section paper">
+  <div class="container-prose split-grid">
+    <div class="reveal">
+      <p class="eyebrow" style="margin-bottom:0.75rem;">Acknowledgments</p>
+      <h2 class="split-h2">With thanks.</h2>
+    </div>
+    <div class="split-body reveal">
+      <p>
+        This project was completed as part of <strong>DH 101: Introduction to Digital
+        Humanities</strong> at the University of California, Los Angeles, Spring 2026.
+      </p>
+      <p>
+        A special thank you to our teaching assistant <strong>Kai</strong> for his time,
+        guidance, and sustained support throughout the project. His feedback shaped our
+        thinking at every stage, from the initial research questions through to the final
+        presentation of findings. Thank you!
+      </p>
+      <p>
+        The City of Los Angeles Job Bulletins dataset was made publicly available through
+        Kaggle by the City of Los Angeles as part of the
+        <a href="https://www.kaggle.com/competitions/data-science-for-good-city-of-los-angeles/overview"
+           target="_blank" rel="noreferrer"
+           style="text-decoration:underline; text-decoration-color:var(--gold); text-decoration-thickness:2px; text-underline-offset:4px;">Data
+        Science for Good</a> program. Full citations are available on the
+        <a href="resources.html" style="text-decoration:underline; text-decoration-color:var(--gold); text-decoration-thickness:2px; text-underline-offset:4px;">Resources page</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAR -->
+<section class="cta-bar">
+  <div class="container-prose cta-bar-row">
+    <p class="cta-bar-title">Ready to explore the dataset?</p>
+    <a href="data.html" class="btn-solid-navy">Continue to The Data <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container-prose site-footer-grid">
+    <div>
+      <p class="footer-brand-title">Who Gets In?</p>
+      <p class="footer-brand-desc">Credential Barriers in the City of Los Angeles Civil Service.</p>
+    </div>
+    <div class="footer-section">
+      <p class="eyebrow gold-soft">Project</p>
+      <ul class="footer-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="data.html">Data</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="narrative.html">Narrative</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </div>
+    <div class="footer-section footer-course">
+      <p class="eyebrow gold-soft">Course</p>
+      <p class="mt">DH 101 — Introduction to Digital Humanities</p>
+      <p>University of California, Los Angeles</p>
+      <p style="margin-top:0.25rem;">Spring 2026</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container-prose footer-copy">© 2026 Song Chen · Jiayi Su · Linn Khant Thuya · Khant Nyi Hlaing · Katie Lew · Hana Chloe Yoon. Built for educational use.</div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -80px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
